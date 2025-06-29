@@ -5,7 +5,7 @@ const { reachOutMail } = require('../template/reachOutMail');
 const sendEmail = async(subject, text, emailAddress, mobileNumber, fullName) => {
     try {
         console.log("req_sendEmail", subject, text, emailAddress, mobileNumber, fullName);
-        // const subject = req?.body?.emailSubject;
+        // const subject = re q?.body?.emailSubject;
         // const text = req?.body?.message;
         // const emailAddress = req?.body?.emailAddress;
         // const mobileNumber = req?.body?.mobileNumber
