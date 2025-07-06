@@ -358,7 +358,7 @@ export default function Home() {
             }
             console.log("handleOnSubmit", fullName, emailAddress, mobileNumber, emailSubject, message);
             setIsLoading(true)
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}api/notification`, {
+            const response = await axios.post(`/api/notification`, {
                 fullName: fullName,
                 emailAddress: emailAddress,
                 mobileNumber: mobileNumber,
