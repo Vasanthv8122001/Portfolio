@@ -210,21 +210,21 @@ export default function Home() {
         // Limit to 10 digits
         const limitedDigits = digitsOnly.slice(0, 10);
 
-        // Apply formatting: (###) ####-###
+        // Apply formatting: (###) ###-####
         let formatted = limitedDigits;
 
-        if (limitedDigits.length > 0) {
+        if (limitedDigits.length >= 1) {
             formatted = `(${limitedDigits.slice(0, 3)}`;
         }
         if (limitedDigits.length >= 4) {
-            formatted += `) ${limitedDigits.slice(3, 7)}`;
+            formatted += `) ${limitedDigits.slice(3, 6)}`;
         }
-        if (limitedDigits.length >= 8) {
-            formatted += `-${limitedDigits.slice(7, 10)}`;
+        if (limitedDigits.length >= 7) {
+            formatted += `-${limitedDigits.slice(6, 10)}`;
         }
 
         return formatted;
-    }
+    };
 
     const handleOnChange = (e) => {
         const { name, value } = e.target;
@@ -371,17 +371,20 @@ export default function Home() {
             setMobileNumber("");
             setEmailSubject("");
             setMessage("");
+            setIsLoading(false)
+            document.getElementById(`focus`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            return document.getElementById('focus')?.focus()
         } catch (error) {
             console.log('error', error);
         }
         setIsLoading(false)
     }
 
-    if (isLoading) {
-        return <>
-            <SpinnerLoader />
-        </>
-    }
+    // if (isLoading) {
+    //     return <>
+    //         <SpinnerLoader />
+    //     </>
+    // }
     return (
         <div className="" ref={containerRef}>
 
@@ -420,7 +423,7 @@ export default function Home() {
                                     <a href="https://www.instagram.com/vasanth_vv_?igsh=c3p6M2hkY2FrbHgy" target="_blank"><i className="bx bxl-instagram"></i></a>
                                     <a href="https://www.linkedin.com/in/vasanth-v-b4210b238" target="_blank"><i className="bx bxl-linkedin"></i></a>
                                 </div>
-                                <a href="#" target="_blank" className="btn">View CV</a>
+                                <a href="/Vasanth%20V.pdf" download="Vasanth V.pdf" target="_blank" className="btn">Download CV</a>
                             </div>
                         </div>
 
@@ -435,7 +438,7 @@ export default function Home() {
                 </div>
             </section>
             <section className="about" id="about" >
-                <section className="about container py-5" id="about">
+                <div className="container">
                     <div className="row align-items-center flex-column-reverse flex-md-row">
 
                         {/* Text Content */}
@@ -460,47 +463,13 @@ export default function Home() {
                         </div>
 
                     </div>
-                </section>
-
+                </div>
             </section>
             <section className="education mb-5" id="education">
                 <h2 className="heading">My <span>Journey</span></h2>
                 <div className="education-row">
                     <div className="education-column">
                         <h3 className="title">Education</h3>
-                        {/* <div className="education-box">
-                            <div className="education-content">
-                                <div className="content">
-                                    <div className="d-flex align-items-end">
-                                        <i class='bx bxs-calendar fs-1'></i><div className="year">2019-2023</div>
-                                    </div>
-                                    <h3>UG Degree</h3>
-                                    <p className="mb-0">B.E. in Electronics and Communication Engineering, Dr. N.G.P Institute of Technology - 8.49%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="education-box">
-                            <div className="education-content">
-                                <div className="content">
-                                    <div className="d-flex align-items-end">
-                                        <i class='bx bxs-calendar fs-1'></i><div className="year">2018-2019</div>
-                                    </div>
-                                    <h3>HSC</h3>
-                                    <p className="mb-0">High school, Sri kumaran school - 83.0%</p>
-                                </div>
-                            </div>
-                        </div> */}
-                        {/* <div className="education-box">
-                            <div className="education-content">
-                                <div className="content">
-                                    <div className="d-flex align-items-end">
-                                        <i class='bx bxs-calendar fs-1'></i><div className="year">2016-2017</div>
-                                    </div>
-                                    <h3>SSLC</h3>
-                                    <p className="mb-0">Sri Ramakrishna school - 96.5%</p>
-                                </div>
-                            </div>
-                        </div> */}
                         <div className="education-box">
                             <div className="education-content">
                                 <div className="content">
@@ -596,9 +565,6 @@ export default function Home() {
             <section className="contact" id="contact">
                 <h2 className="heading">Contact <span>Me!</span></h2>
                 <form className="mx-auto w-75">
-                    {/* <Error hiddenState={isError} alertMessage={errorMessage} /> */}
-
-                    {/* Row 1: Full Name & Email Address */}
                     <div className="input-row">
                         <div className="input-group">
                             <input
@@ -675,9 +641,12 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="button-container">
+                    {!isLoading && <div className="button-container">
                         <button type="submit" className="btn" onClick={handleOnSubmit}>Send Message</button>
-                    </div>
+                    </div>}
+                    {isLoading && <div className="button-container">
+                        <button type="submit" className="btn" disabled>Sending Message...</button>
+                    </div>}
 
                 </form>
             </section>
