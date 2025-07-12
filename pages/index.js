@@ -413,7 +413,7 @@ export default function Home() {
                                 <h3>Hello, I'm</h3>
                                 <h1>Vasanth</h1>
                                 <h3>
-                                    A passionate <span>MERN Stack Developer.</span>
+                                    A passionate <span>Web Developer</span>
                                 </h3>
                                 <p>
                                     I'm actively seeking opportunities that allow me to grow, challenge myself, and enhance both my skills and knowledge in full-stack development. I'm eager to contribute to innovative projects and collaborate with dynamic teams to build impactful digital solutions.
@@ -430,10 +430,13 @@ export default function Home() {
                         {/* Image */}
                         <div className="col-md-6 text-center">
                             <div className="home-img">
-                                <img src="/1000082049.webp" alt="Your image" />
+                                <img
+                                    src="/1000082049.webp"
+                                    alt="Your image"
+                                    className="responsive-img img-fluid d-block mx-auto"
+                                />
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>
