@@ -42,7 +42,7 @@ export default function Home() {
     const [menuActive, setMenuActive] = useState(false);
     const [activeSection, setActiveSection] = useState({
         home: "active",
-        about: "",
+        skills: "",
         education: "",
         portfolio: "",
         contact: "",
@@ -69,7 +69,7 @@ export default function Home() {
 
         let newActive = {
             home: "",
-            about: "",
+            skills: "",
             education: "",
             portfolio: "",
             contact: "",
@@ -117,7 +117,7 @@ export default function Home() {
 
             let newActiveSection = {
                 home: "",
-                about: "",
+                skills: "",
                 education: "",
                 portfolio: "",
                 contact: "",
@@ -131,7 +131,7 @@ export default function Home() {
                 if (scrollY >= offsetTop && scrollY < offsetTop + height && id) {
                     newActiveSection = {
                         home: "",
-                        about: "",
+                        skills: "",
                         education: "",
                         portfolio: "",
                         contact: "",
@@ -174,7 +174,7 @@ export default function Home() {
     //             const ScrollReveal = (await import("scrollreveal")).default;
 
     //             // Clear previous animations if needed
-    //             ScrollReveal().clean(".home-content, .heading, .about, .education, .portfolio, .contact, .home-img, .education-container, .portfolio-box, .contact form");
+    //             ScrollReveal().clean(".home-content, .heading, .skills, .education, .portfolio, .contact, .home-img, .education-container, .portfolio-box, .contact form");
 
     //             const sr = ScrollReveal({
     //                 distance: "80px",
@@ -183,8 +183,8 @@ export default function Home() {
     //             });
 
     //             sr.reveal(".home-content, .heading", { origin: "top" });
-    //             sr.reveal(".home-content h1, .about-img", { origin: "left" });
-    //             sr.reveal(".home-content p, .about-content", { origin: "right" });
+    //             sr.reveal(".home-content h1, .skills-img", { origin: "left" });
+    //             sr.reveal(".home-content p, .skills-content", { origin: "right" });
     //             sr.reveal(".home-img, .education-container, .portfolio-box, .contact form", {
     //                 origin: "bottom",
     //             });
@@ -380,11 +380,49 @@ export default function Home() {
         setIsLoading(false)
     }
 
-    // if (isLoading) {
-    //     return <>
-    //         <SpinnerLoader />
-    //     </>
-    // }
+    const skillsImage = (tech) => {
+
+        if (tech === "JavaScript") {
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="20" />;
+        } else if (tech === "React.js" || tech === "React Hooks") {
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="20" />;
+        } else if (tech === "Next.js") {
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" width="20" />;
+        } else if (tech === "HTML5") {
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="20" />;
+        } else if (tech === "CSS3" || tech === "CSS") {
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="20" />;
+        } else if (tech === "Axios") {
+            return <img src="https://avatars.githubusercontent.com/u/32372333?s=200&v=4" alt="Axios" width="20" />;
+        } else if (tech === "Node.js") {
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="20" />;
+        } else if (tech === "Express.js") {
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" width="20" />;
+        } else if (tech === "MongoDB") {
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" width="20" />;
+        } else if (tech === "MySQL2") {
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="20" />;
+        } else if (tech === "JWT" || tech === "JWT Authentication") {
+            return <img src="https://jwt.io/img/icon.svg" alt="JWT" width="20" />;
+        } else if (tech === "Postman") {
+            return <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" width="20" />;
+        } else if (tech === "Restful APIs") {
+            return <img src="https://img.icons8.com/fluency/48/api.png" alt="REST API" width="20" />;
+        } else if (tech === "MVC" || tech === "MVC Architecture") {
+            return <img src="https://img.icons8.com/ios/50/split-vertical.png" alt="MVC Architecture" width="20" />;
+        } else if (tech === "Middleware") {
+            return <img src="https://img.icons8.com/ios/50/workflow.png" alt="Middleware" width="20" />;
+        } else if (tech === "Schema design") {
+            return <img src="https://img.icons8.com/ios-filled/50/database.png" alt="Schema Design" width="20" />;
+        } else if (tech === "Git/GitHub") {
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="20" />;
+        } else if (tech === "Agile" || tech === "Scrum") {
+            return <img src="https://cdn-icons-png.flaticon.com/512/18314/18314552.png" alt="Agile" width="20" />;
+        } else if (tech === "Scrum") {
+            return <img src="https://img.icons8.com/ios-filled/50/scrum-taskboard.png" alt="Scrum" width="20" />;
+        }
+    }
+
     return (
         <div className="" ref={containerRef}>
 
@@ -396,7 +434,7 @@ export default function Home() {
                 <nav className={`navbar ${menuActive ? "active" : ""}`}
                     ref={navbarRef} >
                     <a className={`${activeSection?.home} cursor-pointer`} onClick={() => { handleActive("home") }}>Home</a>
-                    <a className={`${activeSection?.about} cursor-pointer`} onClick={() => { handleActive("about") }}>About</a>
+                    <a className={`${activeSection?.skills} cursor-pointer`} onClick={() => { handleActive("skills") }}>Skills</a>
                     <a className={`${activeSection?.education} cursor-pointer`} onClick={() => { handleActive("education") }}>Education</a>
                     <a className={`${activeSection?.portfolio} cursor-pointer`} onClick={() => { handleActive("portfolio") }}>Portfolio</a>
                     <a className={`${activeSection?.contact} cursor-pointer`} onClick={() => { handleActive("contact") }}>Contact</a>
@@ -405,9 +443,18 @@ export default function Home() {
             <div id="focus"></div>
             <section className="home" id="home">
                 <div className="container">
-                    <div className="row align-items-center flex-column-reverse flex-md-row">
+                    <div className="row align-items-center flex-md-row">
 
                         {/* Text Content */}
+                        <div className="col-md-6 text-center">
+                            <div className="home-img">
+                                <img
+                                    src="/Vasanth V.webp"
+                                    alt="Your image"
+                                    className="responsive-img img-fluid d-block mx-auto"
+                                />
+                            </div>
+                        </div>
                         <div className="col-md-6 mt-3 mt-md-0">
                             <div className="home-content">
                                 <h3>Hello, I'm</h3>
@@ -428,28 +475,136 @@ export default function Home() {
                         </div>
 
                         {/* Image */}
-                        <div className="col-md-6 text-center">
-                            <div className="home-img">
-                                <img
-                                    src="/Vasanth V.webp"
-                                    alt="Your image"
-                                    className="responsive-img img-fluid d-block mx-auto"
-                                />
-                            </div>
+                    </div>
+                </div>
+            </section>
+            <section className="skills-section py-5" id="skills">
+                <div className="container text-center">
+                    <h2 className="display-5 fw-bold text-light mb-2">Skills</h2>
+                    <p className="text-muted mb-4">Here are some of the technologies I have been working with.</p>
+
+                    {/* Frontend */}
+                    <div className="skill-card mb-4 p-4 rounded-4">
+                        <h4 className="fw-semibold text-white mb-4"><span>Frontend</span></h4>
+                        <div className="row g-3">
+                            {[
+                                'JavaScript', 'React.js', 'Next.js', 'HTML5', 'CSS3',
+                                'React Hooks', 'Axios', 'CSS'
+                            ].map((tech, i) => (
+                                <div className="col-6 col-md-3" key={`fe-${i}`}>
+                                        <span className="tech-badge">
+                                        {skillsImage(tech)}{tech}
+                                        </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Backend */}
+                    <div className="skill-card mb-4 p-4 rounded-4">
+                        <h4 className="fw-semibold text-white mb-4"><span>Backend</span></h4>
+                        <div className="row g-3">
+                            {[
+                                'Node.js', 'Express.js', 'MongoDB', 'MySQL2',
+                                'JWT', 'JWT Authentication', 'Restful APIs',
+                                'Postman', 'MVC', 'Middleware', 'Schema design'
+                            ].map((tech, i) => (
+                                <div className="col-6 col-md-3" key={`be-${i}`}>
+                                    <span className="tech-badge">
+                                        {skillsImage(tech)}
+                                        {tech}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Tools & Methodologies */}
+                    <div className="skill-card mb-4 p-4 rounded-4">
+                        <h4 className="fw-semibold text-white mb-4"><span>Tools & Methodologies</span></h4>
+                        <div className="row g-3">
+                            {['Git/GitHub', 'Agile', 'Scrum', 'MVC Architecture'].map((tech, i) => (
+                                <div className="col-6 col-md-3" key={`tools-${i}`}>
+                                    <span className="tech-badge">{skillsImage(tech)}{tech}</span>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             </section>
-            <section className="about" id="about" >
+
+            {/*{<section className="skills py-5" id="skills">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-md-7 mb-4">
+                            <h1 className="mb-2">Skills</h1>
+                            <h2 className="text-info mb-3">MERN Stack Developer</h2>
+                            <p>
+                                I'm Vasanth, a dedicated MERN Stack Developer with a passion for creating dynamic and responsive web applications.
+                                I specialize in building full-stack solutions using MongoDB, Express, React, and Node.js. I'm always eager to learn,
+                                collaborate, and build innovative digital experiences.
+                            </p>
+
+                            <div className="bg-dark p-3 rounded mt-4">
+                                <h5 className="text-warning mb-3">Frontend</h5>
+                                <div className="row">
+                                    {[
+                                        'JavaScript', 'React.js', 'Next.js', 'HTML5', 'CSS3',
+                                        'Axios', 'React Hooks', 'Bootstrap'
+                                    ].map((skill, i) => (
+                                        <div className="col-6 col-sm-4 mb-2" key={`fe-${i}`}>
+                                            <span className="badge bg-secondary w-100 py-2 fs-6">{skill}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="bg-dark p-3 rounded mt-4">
+                                <h5 className="text-success mb-3">Backend</h5>
+                                <div className="row">
+                                    {[
+                                        'Node.js', 'Express.js', 'MongoDB', 'MySQL2', 'JWT', 'JWT Authentication',
+                                        'MVC', 'MVC Architecture', 'Middleware', 'Postman', 'Restful APIs',
+                                        'Schema Design'
+                                    ].map((skill, i) => (
+                                        <div className="col-6 col-sm-4 mb-2" key={`be-${i}`}>
+                                            <span className="badge bg-secondary w-100 py-2 fs-6">{skill}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="bg-dark p-3 rounded mt-4">
+                                <h5 className="text-primary mb-3">Tools & Methodologies</h5>
+                                <div className="row">
+                                    {['Git/GitHub', 'Agile', 'Scrum'].map((tool, i) => (
+                                        <div className="col-6 col-sm-4 mb-2" key={`tool-${i}`}>
+                                            <span className="badge bg-secondary w-100 py-2 fs-6">{tool}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-5 text-center">
+                            <img
+                                src="/vasanth V.webp"
+                                alt="Profile"
+                                className="img-fluid rounded-4 shadow mt-4 mt-md-0"
+                                style={{ maxWidth: '300px' }}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>}*/}
+
+
+            {/* <section className="skills" id="skills" >
                 <div className="container">
                     <div className="row align-items-center flex-column-reverse flex-md-row">
 
-                        {/* Text Content */}
                         <div className="col-md-6 mt-4 mt-md-0">
-                            <div className="about-content">
-                                <h2 className="heading">
-                                    About <span>Me</span>
-                                </h2>
+                            <div className="skills-content">
+                                <h2 className="heading"></h2>
                                 <h3>MERN Stack Developer</h3>
                                 <p>
                                     I'm Vasanth, a dedicated MERN Stack Developer with a passion for creating dynamic and responsive web applications. I specialize in building full-stack solutions using MongoDB, Express, React, and Node.js, and I’m always eager to learn and work with the latest technologies.
@@ -458,16 +613,15 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* Image */}
                         <div className="col-md-6 text-center">
-                            <div className="about-img">
+                            <div className="skills-img">
                                 <img src="/Vasanth V.webp" alt="Your image" />
                             </div>
                         </div>
 
                     </div>
                 </div>
-            </section>
+            </section> */}
             <section className="education mb-5" id="education">
                 <h2 className="heading">My <span>Journey</span></h2>
                 <div className="education-row">
@@ -656,7 +810,7 @@ export default function Home() {
 
             <footer class="footer" >
                 <div class="footer-text">
-                    <p>Copyright &copy; 2025 </p>
+                    <p>&copy; 2025 Vasanth. All rights reserved</p>
                 </div>
                 <div class="footer-iconTop ">
                     <a className="cursor-pointer" onClick={() => { handleActive("home") }}><i class='bx bx-up-arrow-alt'></i></a>
