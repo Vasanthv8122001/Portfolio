@@ -461,7 +461,7 @@ export default function Home() {
                         {/* Image */}
                         <div className="col-md-6 text-center">
                             <div className="about-img">
-                                <img src="/1000082049.webp" alt="Your image" />
+                                <img src="/Vasanth V.webp" alt="Your image" />
                             </div>
                         </div>
 
