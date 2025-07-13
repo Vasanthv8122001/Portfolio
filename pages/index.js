@@ -431,7 +431,7 @@ export default function Home() {
                         <div className="col-md-6 text-center">
                             <div className="home-img">
                                 <img
-                                    src="/1000082049.webp"
+                                    src="/Vasanth V.webp"
                                     alt="Your image"
                                     className="responsive-img img-fluid d-block mx-auto"
                                 />
@@ -568,8 +568,8 @@ export default function Home() {
             <section className="contact" id="contact">
                 <h2 className="heading">Contact <span>Me!</span></h2>
                 <form className="mx-auto w-75">
-                    <div className="input-row">
-                        <div className="input-group">
+                    <div className="input-row d-flex flex-column flex-md-row gap-3">
+                        <div className="input-group w-100">
                             <input
                                 type="text"
                                 name="fullName"
@@ -582,7 +582,7 @@ export default function Home() {
                             />
                             {fullNameError && <p className="error-text">{fullNameErrorMsg}</p>}
                         </div>
-                        <div className="input-group">
+                        <div className="input-group w-100">
                             <input
                                 type="text"
                                 name="emailAddress"
@@ -598,8 +598,8 @@ export default function Home() {
                     </div>
 
                     {/* Row 2: Mobile Number & Email Subject */}
-                    <div className="input-row">
-                        <div className="input-group">
+                    <div className="input-row d-flex flex-column flex-md-row gap-3">
+                        <div className="input-group w-100">
                             <input
                                 type="text"
                                 name="mobileNumber"
@@ -612,7 +612,7 @@ export default function Home() {
                             />
                             {mobileNumberError && <p className="error-text">{mobileNumberErrorMsg}</p>}
                         </div>
-                        <div className="input-group">
+                        <div className="input-group w-100">
                             <input
                                 type="text"
                                 name="emailSubject"
