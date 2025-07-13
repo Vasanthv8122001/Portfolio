@@ -506,8 +506,8 @@ export default function Home() {
                         <div className="row g-3">
                             {[
                                 'Node.js', 'Express.js', 'MongoDB', 'MySQL2',
-                                'JWT', 'JWT Authentication', 'Restful APIs',
-                                'Postman', 'MVC', 'Middleware', 'Schema design'
+                                'JWT', 'Restful APIs',
+                                'Postman', 'MVC', 'Middleware', 'Schema design', 'JWT Authentication', 
                             ].map((tech, i) => (
                                 <div className="col-6 col-md-3" key={`be-${i}`}>
                                     <span className="tech-badge">
