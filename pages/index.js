@@ -383,43 +383,43 @@ export default function Home() {
     const skillsImage = (tech) => {
 
         if (tech === "JavaScript") {
-            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="20" />;
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="20" height="15" />;
         } else if (tech === "React.js" || tech === "React Hooks") {
-            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="20" />;
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="20" height="15"/>;
         } else if (tech === "Next.js") {
-            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" width="20" />;
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" width="20" height="15"/>;
         } else if (tech === "HTML5") {
-            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="20" />;
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="20" height="15"/>;
         } else if (tech === "CSS3" || tech === "CSS") {
-            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="20" />;
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="20" height="15"/>;
         } else if (tech === "Axios") {
-            return <img src="https://avatars.githubusercontent.com/u/32372333?s=200&v=4" alt="Axios" width="20" />;
+            return <img src="https://avatars.githubusercontent.com/u/32372333?s=200&v=4" alt="Axios" width="20" height="15"/>;
         } else if (tech === "Node.js") {
-            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="20" />;
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="20" height="15"/>;
         } else if (tech === "Express.js") {
-            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" width="20" />;
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" width="20" height="15"/>;
         } else if (tech === "MongoDB") {
-            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" width="20" />;
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" width="20" height="15"/>;
         } else if (tech === "MySQL2") {
-            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="20" />;
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="20" height="15"/>;
         } else if (tech === "JWT" || tech === "JWT Authentication") {
-            return <img src="https://jwt.io/img/icon.svg" alt="JWT" width="20" />;
+            return <img src="https://jwt.io/img/icon.svg" alt="JWT" width="20" height="15"/>;
         } else if (tech === "Postman") {
-            return <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" width="20" />;
+            return <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" width="20" height="15"/>;
         } else if (tech === "Restful APIs") {
-            return <img src="https://img.icons8.com/fluency/48/api.png" alt="REST API" width="20" />;
+            return <img src="https://img.icons8.com/fluency/48/api.png" alt="REST API" width="20" height="15"/>;
         } else if (tech === "MVC" || tech === "MVC Architecture") {
-            return <img src="https://img.icons8.com/ios/50/split-vertical.png" alt="MVC Architecture" width="20" />;
+            return <img src="https://img.icons8.com/ios/50/split-vertical.png" alt="MVC Architecture" width="20" height="15"/>;
         } else if (tech === "Middleware") {
-            return <img src="https://img.icons8.com/ios/50/workflow.png" alt="Middleware" width="20" />;
+            return <img src="https://img.icons8.com/ios/50/workflow.png" alt="Middleware" width="20" height="15"/>;
         } else if (tech === "Schema design") {
-            return <img src="https://img.icons8.com/ios-filled/50/database.png" alt="Schema Design" width="20" />;
+            return <img src="https://img.icons8.com/ios-filled/50/database.png" alt="Schema Design" width="20" height="15"/>;
         } else if (tech === "Git/GitHub") {
-            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="20" />;
+            return <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="20" height="15"/>;
         } else if (tech === "Agile" || tech === "Scrum") {
-            return <img src="https://cdn-icons-png.flaticon.com/512/18314/18314552.png" alt="Agile" width="20" />;
+            return <img src="https://cdn-icons-png.flaticon.com/512/18314/18314552.png" alt="Agile" width="20" height="15"/>;
         } else if (tech === "Scrum") {
-            return <img src="https://img.icons8.com/ios-filled/50/scrum-taskboard.png" alt="Scrum" width="20" />;
+            return <img src="https://img.icons8.com/ios-filled/50/scrum-taskboard.png" alt="Scrum" width="20" height="15"/>;
         }
     }
 
@@ -492,7 +492,7 @@ export default function Home() {
                                 'React Hooks', 'Axios', 'CSS'
                             ].map((tech, i) => (
                                 <div className="col-6 col-md-3" key={`fe-${i}`}>
-                                        <span className="tech-badge">
+                                        <span className="tech-badge d-inline-flex align-items-center gap-2">
                                         {skillsImage(tech)}{tech}
                                         </span>
                                 </div>
@@ -510,7 +510,7 @@ export default function Home() {
                                 'Postman', 'MVC', 'Middleware', 'Schema design', 'JWT Authentication', 
                             ].map((tech, i) => (
                                 <div className="col-6 col-md-3" key={`be-${i}`}>
-                                    <span className="tech-badge">
+                                    <span className="tech-badge d-inline-flex align-items-center gap-2">
                                         {skillsImage(tech)}
                                         {tech}</span>
                                 </div>
@@ -524,7 +524,7 @@ export default function Home() {
                         <div className="row g-3">
                             {['Git/GitHub', 'Agile', 'Scrum', 'MVC Architecture'].map((tech, i) => (
                                 <div className="col-6 col-md-3" key={`tools-${i}`}>
-                                    <span className="tech-badge">{skillsImage(tech)}{tech}</span>
+                                    <span className="tech-badge d-inline-flex align-items-center gap-2">{skillsImage(tech)}{tech}</span>
                                 </div>
                             ))}
                         </div>
@@ -532,96 +532,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/*{<section className="skills py-5" id="skills">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-md-7 mb-4">
-                            <h1 className="mb-2">Skills</h1>
-                            <h2 className="text-info mb-3">MERN Stack Developer</h2>
-                            <p>
-                                I'm Vasanth, a dedicated MERN Stack Developer with a passion for creating dynamic and responsive web applications.
-                                I specialize in building full-stack solutions using MongoDB, Express, React, and Node.js. I'm always eager to learn,
-                                collaborate, and build innovative digital experiences.
-                            </p>
-
-                            <div className="bg-dark p-3 rounded mt-4">
-                                <h5 className="text-warning mb-3">Frontend</h5>
-                                <div className="row">
-                                    {[
-                                        'JavaScript', 'React.js', 'Next.js', 'HTML5', 'CSS3',
-                                        'Axios', 'React Hooks', 'Bootstrap'
-                                    ].map((skill, i) => (
-                                        <div className="col-6 col-sm-4 mb-2" key={`fe-${i}`}>
-                                            <span className="badge bg-secondary w-100 py-2 fs-6">{skill}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="bg-dark p-3 rounded mt-4">
-                                <h5 className="text-success mb-3">Backend</h5>
-                                <div className="row">
-                                    {[
-                                        'Node.js', 'Express.js', 'MongoDB', 'MySQL2', 'JWT', 'JWT Authentication',
-                                        'MVC', 'MVC Architecture', 'Middleware', 'Postman', 'Restful APIs',
-                                        'Schema Design'
-                                    ].map((skill, i) => (
-                                        <div className="col-6 col-sm-4 mb-2" key={`be-${i}`}>
-                                            <span className="badge bg-secondary w-100 py-2 fs-6">{skill}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="bg-dark p-3 rounded mt-4">
-                                <h5 className="text-primary mb-3">Tools & Methodologies</h5>
-                                <div className="row">
-                                    {['Git/GitHub', 'Agile', 'Scrum'].map((tool, i) => (
-                                        <div className="col-6 col-sm-4 mb-2" key={`tool-${i}`}>
-                                            <span className="badge bg-secondary w-100 py-2 fs-6">{tool}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-md-5 text-center">
-                            <img
-                                src="/vasanth V.webp"
-                                alt="Profile"
-                                className="img-fluid rounded-4 shadow mt-4 mt-md-0"
-                                style={{ maxWidth: '300px' }}
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>}*/}
-
-
-            {/* <section className="skills" id="skills" >
-                <div className="container">
-                    <div className="row align-items-center flex-column-reverse flex-md-row">
-
-                        <div className="col-md-6 mt-4 mt-md-0">
-                            <div className="skills-content">
-                                <h2 className="heading"></h2>
-                                <h3>MERN Stack Developer</h3>
-                                <p>
-                                    I'm Vasanth, a dedicated MERN Stack Developer with a passion for creating dynamic and responsive web applications. I specialize in building full-stack solutions using MongoDB, Express, React, and Node.js, and I’m always eager to learn and work with the latest technologies.
-                                    <br />I enjoy solving complex problems, collaborating with teams, and turning ideas into real-world digital experiences. Currently, I’m looking for opportunities where I can grow my skills, contribute to meaningful projects, and be a part of a forward-thinking tech environment.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="col-md-6 text-center">
-                            <div className="skills-img">
-                                <img src="/Vasanth V.webp" alt="Your image" />
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section> */}
             <section className="education mb-5" id="education">
                 <h2 className="heading">My <span>Journey</span></h2>
                 <div className="education-row">
@@ -633,7 +543,7 @@ export default function Home() {
                                     <div className="d-flex align-items-center gap-2">
                                         <i class='bx bxs-calendar fs-4'></i>
                                         <div>
-                                            <h3 className="mb-0">UG Degree</h3>
+                                            <h4 className="mb-0">UG Degree</h4>
                                             <small className="text-muted fs-1">2019-2023 · B.E. in Electronics and Communication Engineering, Dr. N.G.P Institute of Technology - 8.49%</small>
                                         </div>
                                     </div>
@@ -646,7 +556,7 @@ export default function Home() {
                                     <div className="d-flex align-items-center gap-2">
                                         <i class='bx bxs-calendar fs-4'></i>
                                         <div>
-                                            <h3 className="mb-0">HSC</h3>
+                                            <h4 className="mb-0">HSC</h4>
                                             <small className="text-muted fs-1">2018-2019 · High school, Sri kumaran school - 83.0%</small>
                                         </div>
                                     </div>
@@ -659,7 +569,7 @@ export default function Home() {
                                     <div className="d-flex align-items-center gap-2">
                                         <i class='bx bxs-calendar fs-4'></i>
                                         <div>
-                                            <h3 className="mb-0">SSLC</h3>
+                                            <h4 className="mb-0">SSLC</h4>
                                             <small className="text-muted fs-1">2016-2017 · Sri Ramakrishna school - 96.5%</small>
                                         </div>
                                     </div>
@@ -675,8 +585,8 @@ export default function Home() {
                                     <div className="d-flex align-items-center gap-2">
                                         <i class='bx bxs-calendar fs-4'></i>
                                         <div>
-                                            <h3 className="mb-0">Web Developer</h3>
-                                            <small className="text-muted">2023 · Span Technology Services</small>
+                                            <h4 className="mb-0">Software Engineer - (Web Developer)</h4>
+                                            <small className="text-muted">2023-2025 · Span Technology Services</small>
                                         </div>
                                     </div>
                                 </div>
